@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="640.0" styleClass="form" stylesheets="@welcome.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.teachersms.HelloController">
+    <children>
+        <Label layoutX="191.0" layoutY="17.0" styleClass="close" stylesheets="@welcome.css" text="WITAJ W BAZIE NAUCZYCIELI!" textAlignment="CENTER" textFill="#252225">
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="566.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="53.0" styleClass="textfield" stylesheets="@welcome.css" text="X">
+            <effect>
+                <ColorAdjust />
+            </effect>
+        </Button>
+      <AnchorPane layoutX="15.0" layoutY="77.0" prefHeight="321.0" prefWidth="605.0">
+         <children>
+            <TableView fx:id="teacherTable" layoutY="41.0" onMouseClicked="#rowClicked" onSort="#initialize" prefHeight="280.0" prefWidth="354.0" />
+            <TableView fx:id="classteacherTable" layoutX="375.0" layoutY="41.0" onSort="#initialize" prefHeight="280.0" prefWidth="230.0" />
+            <TextField fx:id="filterField" layoutY="14.0" prefHeight="26.0" prefWidth="354.0" promptText="SearchBox( enter Name, Surname or Salary)" />
+            <ComboBox fx:id="comboGroup" layoutX="375.0" layoutY="1.0" onAction="#displayGroups" prefHeight="26.0" prefWidth="230.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="478.0" layoutY="527.0" mnemonicParsing="false" onAction="#buttonAdd" text="Dodaj nauczyciela" />
+      <Button layoutX="480.0" layoutY="561.0" mnemonicParsing="false" onAction="#buttonRemove" text="Usun nauczyciela" />
+      <TextField fx:id="textfieldName" layoutX="14.0" layoutY="540.0" prefHeight="26.0" prefWidth="113.0" promptText="Imie" />
+      <TextField fx:id="textfieldSurname" layoutX="150.0" layoutY="540.0" promptText="Nazwisko" />
+      <TextField fx:id="textfieldSalary" layoutX="320.0" layoutY="540.0" prefHeight="26.0" prefWidth="113.0" promptText="Wynagrodzenie" />
+      <TextField fx:id="textfieldYear" layoutX="70.0" layoutY="574.0" promptText="Rok urodzin" />
+      <ChoiceBox fx:id="textfieldCondition" layoutX="257.0" layoutY="574.0" prefWidth="150.0" />
+      <Button layoutX="478.0" layoutY="600.0" mnemonicParsing="false" onAction="#submit" text="Edytuj nauczyciela" />
+    </children>
+</AnchorPane>
