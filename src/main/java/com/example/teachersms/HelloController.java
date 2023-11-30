@@ -1,9 +1,9 @@
 package com.example.teachersms;
 
 
-import engine.ClassTeacher;
-import engine.Teacher;
-import engine.TeacherCondition;
+import sources.ClassTeacher;
+import sources.Teacher;
+import sources.TeacherCondition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;

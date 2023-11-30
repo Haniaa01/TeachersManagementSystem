@@ -5,10 +5,10 @@ module com.example.teachersms {
     requires org.kordamp.bootstrapfx.core;
 
     exports com.example.teachersms;
-    exports engine;
+    exports sources;
 
     opens com.example.teachersms to
             javafx.fxml;
-    opens engine to
+    opens sources to
             javafx.fxml;
 }

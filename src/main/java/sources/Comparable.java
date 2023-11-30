@@ -1,4 +1,4 @@
-package engine;
+package sources;
 
 public interface Comparable<Teacher> {
     public int compareTo(Teacher other);
